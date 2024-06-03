@@ -4,21 +4,21 @@
 
     <StackLayout Padding="20">
         <Label Text="Ingrese número telefónico:" />
-        <Entry x:Name="PhoneNumberEntry" />
+        <Entry x:Name="MRPhoneNumberEntry" />
 
         <Label Text="Escoja el operador telefónico:" />
-        <Picker x:Name="OperatorPicker">
+        <Picker x:Name="MROperatorPicker">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Operador 1</x:String>
-                    <x:String>Operador 2</x:String>
-                    <x:String>Operador 3</x:String>
+                    <x:String>Movistar</x:String>
+                    <x:String>Pillophone</x:String>
+                    <x:String>Claro</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
 
         <Label Text="Escoja el monto de recarga:" />
-        <Picker x:Name="AmountPicker">
+        <Picker x:Name="MRAmountPicker">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>3</x:String>
@@ -28,7 +28,7 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <Label x:Name="ConfirmationLabel" />
+        <Label x:Name="MRConfirmationLabel" />
 
         <Button Text="Realizar Recarga" Clicked="OnRechargeClicked" />
     </StackLayout>
