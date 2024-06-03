@@ -20,7 +20,8 @@ namespace prueba
             var confirm = await DisplayAlert("Confirmación", $"¿Desea realizar la recarga de {selectedAmount} al número {phoneNumber} con el operador {selectedOperator}?", "Sí", "No");
             if (confirm)
             {
-                MRConfirmationLabel.Text = $"Recarga de {selectedAmount} realizada con éxito.";
+                await DisplayAlert("GRACIAS", "Por su recarga.", "OK");
+                return;
             }
         }
     }
