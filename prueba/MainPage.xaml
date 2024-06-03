@@ -1,0 +1,36 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Ingrese número telefónico:" />
+        <Entry x:Name="PhoneNumberEntry" />
+
+        <Label Text="Escoja el operador telefónico:" />
+        <Picker x:Name="OperatorPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Operador 1</x:String>
+                    <x:String>Operador 2</x:String>
+                    <x:String>Operador 3</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Escoja el monto de recarga:" />
+        <Picker x:Name="AmountPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>3</x:String>
+                    <x:String>5</x:String>
+                    <x:String>10</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label x:Name="ConfirmationLabel" />
+
+        <Button Text="Realizar Recarga" Clicked="OnRechargeClicked" />
+    </StackLayout>
+
+</ContentPage>
